@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home"
+    tools:showIn="@layout/activity_home">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/logo_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@color/gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/name"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        ></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:id="@+id/editpro"
+        android:textColor="@color/white"
+        android:background="@drawable/butnclick"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black_off"
+        android:text="Meet Patel"
+        android:layout_below="@+id/profile_image"
+        android:textSize="18dp"
+        android:id="@+id/name"
+        android:textStyle="bold"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editpro"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/lab">
+
+
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:background="@drawable/border_left"
+            android:layout_marginTop="50dp">
+            <ImageView
+                android:id="@+id/car1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/carleft"
+                android:padding="10dp"></ImageView>
+
+
+
+            <ToggleButton
+                android:textColor="@color/white"
+
+                android:id="@+id/btn1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"></ToggleButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:background="@drawable/border_left"
+            android:layout_marginTop="200dp">
+            <ImageView
+                android:id="@+id/car2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/carleft"
+                android:padding="10dp"></ImageView>
+            <ToggleButton
+                android:textColor="@color/white"
+
+                android:id="@+id/btn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"></ToggleButton>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_right"
+            android:layout_marginTop="127dp">
+            <ToggleButton
+                android:textColor="@color/white"
+
+                android:id="@+id/btn3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"></ToggleButton>
+
+            <ImageView
+                android:id="@+id/car3"
+                android:layout_width="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"
+                android:src="@drawable/carright"
+                android:padding="10dp"></ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_right"
+            android:layout_marginTop="280dp">
+            <ToggleButton
+                android:textColor="@color/white"
+                android:id="@+id/btn4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                   android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"></ToggleButton>
+
+            <ImageView
+                android:id="@+id/car4"
+                android:layout_width="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"
+                android:src="@drawable/carright"
+                android:padding="10dp"></ImageView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Developed by BIT"
+        android:background="@color/white"
+        android:textColor="@color/black_off"
+        android:padding="5dp"
+        android:id="@+id/lab"
+        android:gravity="center"/>
+
+</RelativeLayout>
