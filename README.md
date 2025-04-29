@@ -1,58 +1,75 @@
-# ParkVision - Smart Parking Detection System
+# ParkVision - Smart Parking Management System
 
-## Overview
+## Project Overview
 
-ParkVision is an intelligent parking management system that uses computer vision to detect and monitor parking spot availability in real-time. The system processes surveillance camera feeds to identify empty parking spaces and provides this information to users through a modern web interface.
-
-## Tech Stack
-
-- **Frontend**: React.js
-- **Backend**: Flask (Python)
-- **Database**: PostgreSQL
-- **Computer Vision**: OpenCV, CNN (Convolutional Neural Network)
-- **Cloud Infrastructure**: AWS
+ParkVision is an Android mobile application designed to bring efficiency and convenience to parking management systems. The app enables users to monitor parking spaces in real-time and receive notifications when parking spaces become available or occupied.
 
 ## Key Features
 
-- Real-time parking spot detection using computer vision
-- Live monitoring of parking space availability
-- User-friendly web interface for checking parking status
-- Centralized data storage and management
-- Scalable cloud-based architecture
+- **Real-time Parking Space Monitoring**: View the status of up to four parking spaces in real-time
+- **Notification System**: Subscribe to specific parking spaces to receive notifications when they become available or occupied
+- **User Authentication**: Secure phone number-based authentication using Firebase Authentication and AWS Cognito
+- **User Profiles**: Create and manage user profiles with customizable information and profile pictures
+- **Intuitive UI**: Clean and user-friendly interface with visual indicators for parking space status
+
+## Technical Details
+
+- **Platform**: Android Native
+- **Backend**: AWS DynamoDB for data storage and synchronization
+- **Authentication**: Firebase Authentication for enhanced security
+- **Notifications**: Firebase Cloud Messaging for reliable real-time push notifications
+- **Storage**: Firebase Storage for scalable media storage
+- **Minimum SDK**: Android 5.0 (Lollipop)
+- **Cloud Infrastructure**: AWS for scalable backend operations and analytics
 
 ## System Architecture
 
-### Frontend (React.js)
+The application follows a client-server architecture where:
 
-- Modern, responsive user interface
-- Real-time updates of parking availability
-- Interactive parking spot visualization
-- User authentication and preferences
+- The Android app serves as the client interface
+- Firebase and AWS provide the backend services including database, authentication, and notification
+- AWS Lambda functions process business logic and handle scaling
+- Real-time synchronization allows for immediate updates across devices
 
-### Backend (Flask)
+## Implementation Highlights
 
-- RESTful API endpoints for data access
-- Video stream processing
-- CNN model integration for spot detection
-- AWS service integration
+- **Offline Capability**: The app uses Firebase's persistence feature to ensure functionality even when offline
+- **Real-time Synchronization**: Changes in parking space availability are immediately reflected across all user devices
+- **Topic-based Notifications**: Users can subscribe to specific parking spaces to receive targeted notifications
+- **User Data Persistence**: User sessions are maintained using SharedPreferences for seamless experience
+- **Cloud Processing**: AWS cloud services handle data processing and analytics in the background
 
-### Computer Vision Pipeline
+## Getting Started
 
-- OpenCV for image preprocessing
-- CNN model for parking spot classification
-- Real-time video feed analysis
-- Automated spot status updates
+1. Clone the repository
+2. Connect the project to your Firebase project and AWS account
+3. Configure Firebase Authentication and Cloud Messaging
+4. Set up necessary AWS services (DynamoDB)
+5. Build and run the application on your Android device or emulator
 
-### Database (PostgreSQL)
+## Dependencies
 
-- Parking spot status tracking
-- Historical data storage
-- User data management
-- System configuration storage
+- Firebase Authentication
+- Firebase Realtime Database
+- Firebase Cloud Messaging
+- AWS SDK for Android
+- AWS Amplify
+- CircleImageView
+- Material EditText
+- Glide for image loading and caching
 
-### Cloud Infrastructure (AWS)
+## Future Enhancements
 
-- Scalable compute resources
-- Reliable data storage
-- High availability
-- Security management
+- Integration with payment gateways for paid parking
+- GPS-based navigation to available parking spaces
+- Statistical analysis of parking usage patterns using AWS Analytics
+- Multiple parking lot management with AWS IoT Core integration
+- Predictive parking availability using AWS Machine Learning services
+
+## Project Status
+
+Active development
+
+---
+
+This smart parking solution demonstrates the effective use of IoT concepts and mobile technology to solve urban transportation challenges by making parking more efficient and user-friendly.
